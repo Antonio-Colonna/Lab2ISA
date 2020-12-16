@@ -1,0 +1,57 @@
+synopsys script
+
+export SYNOPSYS_ROOT=/software/synopsys
+export PATH=$PATH:$SYNOPSYS_ROOT/sold_current
+export SYNOPSYS=$SYNOPSYS_ROOT/syn_current_64.18
+export PATH=$SYNOPSYS/bin:$PATH
+
+export LM_LICENSE_FILE=27020@led-x3850-3.polito.it
+
+-----------------------------------------------------
+
+define_design_lib WORK -path ./work
+set search_path [list . /software/synopsys/syn_current_64_18/libraries/syn /software/dk/nangate45/synopsys ]
+set link_library [list "*" "NangateOpenCellLibrary_typical_ecsm.db" "dw_foundation.sldb" ]
+set target_library [list "NangateOpenCellLibrary_typical_ecsm.db" ]
+set synthetic_library [list "dw_foundation.sldb" ]
+
+dc_shell-xg-t
+
+define_design_lib WORK -path ./work
+analyze -f vhdl -lib WORK ../src/register_d.vhd
+analyze -f vhdl -lib WORK ../src/register_d34.vhd
+analyze -f vhdl -lib WORK ../src/shreg.vhd
+analyze -f vhdl -lib WORK ../src/mux8to1.vhd
+analyze -f vhdl -lib WORK ../src/two_comp.vhd
+analyze -f vhdl -lib WORK ../src/cnt.vhd
+analyze -f vhdl -lib WORK ../src/mult.vhd
+analyze -f vhdl -lib WORK ../src/fpnormalize_fpnormalize.vhd
+analyze -f vhdl -lib WORK ../src/fpround_fpround.vhd
+analyze -f vhdl -lib WORK ../src/packfp_packfp.vhd
+analyze -f vhdl -lib WORK ../src/unpackfp_unpackfp.vhd
+analyze -f vhdl -lib WORK ../src/fpmul_single_cycle.vhd
+analyze -f vhdl -lib WORK ../src/fpmul_stage1_struct.vhd
+analyze -f vhdl -lib WORK ../src/fpmul_stage2_struct.vhd
+analyze -f vhdl -lib WORK ../src/fpmul_stage3_struct.vhd
+analyze -f vhdl -lib WORK ../src/fpmul_stage4_struct.vhd
+analyze -f vhdl -lib WORK ../src/fpmul_pipeline.vhd
+set power_preserve_rtl_hier_names true
+elaborate FPmul -arch pipeline -lib WORK
+create_clock -name MY_CLK -period 3.70 clk
+set_dont_touch_network MY_CLK
+set_clock_uncertainty 0.07 [get_clocks MY_CLK]
+set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] clk]
+set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
+set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
+set_load $OLOAD [all_outputs]
+
+ungroup -all -flatten
+
+compile
+
+
+report_timing > ./report_timing_mbe.txt
+
+report_area > ./report_area_mbe.txt
+
+

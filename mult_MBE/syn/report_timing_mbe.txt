@@ -1,0 +1,226 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FPmul
+Version: O-2018.06-SP4
+Date   : Mon Dec 14 21:10:30 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: I2/mult_com/pp_2/Q_reg[2]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: I2/SIG_in_reg[27]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FPmul              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  I2/mult_com/pp_2/Q_reg[2]/CK (DFFR_X1)                  0.00       0.00 r
+  I2/mult_com/pp_2/Q_reg[2]/Q (DFFR_X1)                   0.09       0.09 f
+  add_8_root_add_0_root_I2/mult_com/add_149/A[4] (FPmul_DW01_add_4)
+                                                          0.00       0.09 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U173/ZN (AND2_X1)
+                                                          0.05       0.14 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U285/ZN (NAND2_X1)
+                                                          0.03       0.17 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U287/ZN (NAND3_X1)
+                                                          0.04       0.21 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U291/ZN (NAND2_X1)
+                                                          0.03       0.24 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U293/ZN (NAND3_X1)
+                                                          0.05       0.28 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U97/ZN (NAND2_X1)
+                                                          0.04       0.32 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U99/ZN (NAND3_X1)
+                                                          0.05       0.37 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U156/ZN (NAND2_X1)
+                                                          0.04       0.41 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U112/ZN (NAND3_X1)
+                                                          0.04       0.45 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U238/ZN (NAND2_X1)
+                                                          0.04       0.48 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U241/ZN (NAND3_X1)
+                                                          0.04       0.52 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U278/ZN (NAND2_X1)
+                                                          0.03       0.55 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U280/ZN (NAND3_X1)
+                                                          0.03       0.59 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U1_11/CO (FA_X1)
+                                                          0.10       0.69 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U56/ZN (NAND2_X1)
+                                                          0.05       0.73 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U58/ZN (NAND3_X1)
+                                                          0.04       0.77 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U227/ZN (NAND2_X1)
+                                                          0.04       0.81 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U181/ZN (NAND3_X1)
+                                                          0.04       0.85 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U196/ZN (NAND2_X1)
+                                                          0.04       0.88 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U182/ZN (NAND3_X1)
+                                                          0.04       0.92 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U215/ZN (NAND2_X1)
+                                                          0.04       0.96 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U110/ZN (NAND3_X1)
+                                                          0.04       1.00 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U161/ZN (NAND2_X1)
+                                                          0.03       1.03 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U164/ZN (NAND3_X1)
+                                                          0.04       1.08 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U210/ZN (NAND2_X1)
+                                                          0.03       1.11 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U212/ZN (NAND3_X1)
+                                                          0.04       1.15 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U74/ZN (NAND2_X1)
+                                                          0.05       1.20 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U76/ZN (NAND3_X1)
+                                                          0.04       1.24 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U233/ZN (NAND2_X1)
+                                                          0.04       1.27 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U205/ZN (NAND3_X1)
+                                                          0.04       1.31 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U272/ZN (NAND2_X1)
+                                                          0.04       1.35 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U274/ZN (NAND3_X1)
+                                                          0.04       1.39 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U192/ZN (NAND2_X1)
+                                                          0.04       1.43 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U177/ZN (NAND3_X1)
+                                                          0.04       1.46 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U221/ZN (NAND2_X1)
+                                                          0.04       1.50 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U107/ZN (NAND3_X1)
+                                                          0.04       1.54 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U147/ZN (NAND2_X1)
+                                                          0.03       1.57 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U150/ZN (NAND3_X1)
+                                                          0.05       1.61 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U68/ZN (NAND2_X1)
+                                                          0.04       1.65 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U70/ZN (NAND3_X1)
+                                                          0.05       1.70 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U102/ZN (NAND2_X1)
+                                                          0.04       1.74 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U105/ZN (NAND3_X1)
+                                                          0.04       1.78 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U131/ZN (NAND2_X1)
+                                                          0.04       1.81 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U132/ZN (NAND3_X1)
+                                                          0.04       1.85 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U137/ZN (NAND2_X1)
+                                                          0.04       1.90 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U138/ZN (NAND3_X1)
+                                                          0.04       1.93 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U62/ZN (NAND2_X1)
+                                                          0.04       1.97 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U64/ZN (NAND3_X1)
+                                                          0.04       2.01 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U203/ZN (NAND2_X1)
+                                                          0.03       2.04 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U179/ZN (NAND3_X1)
+                                                          0.04       2.09 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U261/ZN (NAND2_X1)
+                                                          0.04       2.13 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U262/ZN (NAND3_X1)
+                                                          0.04       2.17 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U266/ZN (NAND2_X1)
+                                                          0.03       2.20 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U268/ZN (NAND3_X1)
+                                                          0.04       2.24 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U142/ZN (NAND2_X1)
+                                                          0.03       2.27 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U144/ZN (NAND3_X1)
+                                                          0.04       2.31 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U1_33/CO (FA_X1)
+                                                          0.10       2.40 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U37/ZN (NAND2_X1)
+                                                          0.03       2.44 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U39/ZN (NAND3_X1)
+                                                          0.04       2.48 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U1_35/CO (FA_X1)
+                                                          0.10       2.57 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U50/ZN (NAND2_X1)
+                                                          0.05       2.62 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U52/ZN (NAND3_X1)
+                                                          0.04       2.66 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U169/ZN (NAND2_X1)
+                                                          0.04       2.70 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U171/ZN (NAND3_X1)
+                                                          0.04       2.73 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U186/ZN (NAND2_X1)
+                                                          0.03       2.77 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U176/ZN (NAND3_X1)
+                                                          0.04       2.81 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U242/ZN (NAND2_X1)
+                                                          0.04       2.85 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U44/ZN (NAND3_X1)
+                                                          0.04       2.88 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U250/ZN (NAND2_X1)
+                                                          0.04       2.92 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U251/ZN (NAND3_X1)
+                                                          0.04       2.96 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U256/ZN (NAND2_X1)
+                                                          0.03       2.99 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U79/ZN (NAND3_X1)
+                                                          0.04       3.03 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U91/ZN (NAND2_X1)
+                                                          0.04       3.08 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U77/ZN (NAND3_X1)
+                                                          0.04       3.11 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U118/ZN (NAND2_X1)
+                                                          0.03       3.15 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U115/ZN (NAND3_X1)
+                                                          0.04       3.19 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U125/ZN (NAND2_X1)
+                                                          0.04       3.23 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U19/ZN (NAND3_X1)
+                                                          0.04       3.27 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U28/ZN (NAND2_X1)
+                                                          0.03       3.30 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U31/ZN (NAND3_X1)
+                                                          0.04       3.34 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U85/ZN (NAND2_X1)
+                                                          0.04       3.38 r
+  add_8_root_add_0_root_I2/mult_com/add_149/U87/ZN (NAND3_X1)
+                                                          0.03       3.42 f
+  add_8_root_add_0_root_I2/mult_com/add_149/U24/ZN (XNOR2_X1)
+                                                          0.06       3.47 f
+  add_8_root_add_0_root_I2/mult_com/add_149/SUM[47] (FPmul_DW01_add_4)
+                                                          0.00       3.47 f
+  add_0_root_add_0_root_I2/mult_com/add_149/A[47] (FPmul_DW01_add_3)
+                                                          0.00       3.47 f
+  add_0_root_add_0_root_I2/mult_com/add_149/U68/ZN (XNOR2_X1)
+                                                          0.06       3.53 f
+  add_0_root_add_0_root_I2/mult_com/add_149/U67/ZN (XNOR2_X1)
+                                                          0.05       3.58 f
+  add_0_root_add_0_root_I2/mult_com/add_149/SUM[47] (FPmul_DW01_add_3)
+                                                          0.00       3.58 f
+  I2/SIG_in_reg[27]/D (DFF_X1)                            0.01       3.59 f
+  data arrival time                                                  3.59
+
+  clock MY_CLK (rise edge)                                3.70       3.70
+  clock network delay (ideal)                             0.00       3.70
+  clock uncertainty                                      -0.07       3.63
+  I2/SIG_in_reg[27]/CK (DFF_X1)                           0.00       3.63 r
+  library setup time                                     -0.04       3.59
+  data required time                                                 3.59
+  --------------------------------------------------------------------------
+  data required time                                                 3.59
+  data arrival time                                                 -3.59
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
